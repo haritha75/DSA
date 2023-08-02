@@ -1,0 +1,54 @@
+
+Why java Famous ?
+
+    -> Because java provides more additional features.
+    -> java achieves platform independency that means we can run java application in  any os.
+    -> We have one priciple write once run any where(WORA).it applicable to the java ,because java also like this.
+    -> also provide multithreading concept.
+
+what is platform dependency ?
+
+     -> we cannot run  some application like c,c++ in all os.
+     -> we can run only few os.
+     -> which os we can compile same execution also same os. for example, if you compile on windows but we can execute the program in linux it will not work because it works same os.
+
+What is platform independency ?
+
+     -> It means we can run application any os theris is not particular one.
+     -> like java it support platform independency. we can run any os if you have jvm in your system.
+
+Why we donot send sorce file to the clients ?
+
+       -> Mainly two reasons:
+          
+          1) They can see our logic of the program.if you donot  want to see logic of the program then donot send.
+          2) They can make changes also.sometimes it creates problems because they change code then sometimes code does not run. 
+
+What is algorithm ?
+
+        -> Step by step procedure to solve a problem.
+
+Why we need algorithm ?
+
+          -> To do the work in proper way. i means order wise.
+          -> If you not follow the steps wise then sometimes getting errors.
+
+Why DSA ?
+        
+        -> Because DSA is a rare skills.
+        -> If you works on product based companies that time companies looking into rare skills.
+        -> And also DSA is not only specific for java it applied to  all languages. it is a generic.
+
+Is java Support compiler or interpreter ?
+
+      -> java support both compiler and interpretation.
+      -> Compiler convert the source code to byte code.
+      -> Interpreter convert byte code to jvm understanble language.
+
+Compared to interpreter why compiler used mostly ?
+
+      -> Because compiler do the work very fast compared to interpreter.
+      -> And also it can store the data in a class file so there is no need to compile everytime.
+      -> But interpreter takes so much time because it is step by step process and also it does not store data in any where so we can execute the program everytime.       
+
+
