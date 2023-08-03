@@ -1,0 +1,36 @@
+How to Apporoach a problem :
+  
+      -> We have 5 levels mainly.
+
+      Read the problem ----> Analyize the problem ----> Think of a solution ----> Pen down the solution ----> Code the solution
+
+      -> And also we have three types of pen down solution.
+          
+          1) Flowchart
+          2) Algorithm
+          3) Pseudo Code
+
+If you have multiple solutions which solution you can choose ?
+
+        -> choose Based on time and space complexity problem.
+        -> choose which solution is take less time and space complexity.
+
+Trade-off :
+
+        -> It means giving up of one thing in return for another like exchange type.
+        -> In problem solving sometimes time complexity increases and space decrease or space increases and time decrease.        
+
+What is the difference between c and c++?
+
+      -> c is a procedural alngauge.
+      -> c++ is a object oriented language.
+
+What is procedural?
+
+     -> It is a method process like c language without classes and object we can use only methods.
+
+What is difference between c++ and java?
+
+      -> In c++ we have pointers concept but security java does not suppoort.
+      -> java is platform independent and also  have multithreading concept.
+
