@@ -1,0 +1,62 @@
+
+what is algorithm ?
+        
+        -> Algorithm means " A set of rules to be followed in calculations or other problem-solving operations. or
+        -> A procedure for solving mathematical problem in a finite number of steps that frequently involves recursive operations.
+
+Why we need  algorithms?
+
+        -> Algorithms are necessary for solving complex problems efficiently and effectively. 
+        -> They help to automate processes and make them more reliable, faster, and easier to perform.
+        -> The are set of rules that guide the software in performing solving problems.
+
+Characteristics of an Algorithm?
+
+     1. Clear and unambiguous
+     2. Well defined inputs
+     3. Language independent
+     4. Feasible
+     5. Finite-ness 
+     6. Well defined outputs
+
+
+Types of Algorithm:
+------------------
+
+     1. Brute force algorithm
+     2. Recursive algorithm
+     3. Backtracking algorithm
+     4. Searching algorithm
+     5. Sorting algorithm
+     6. Hashing algorithm
+     7. Divide and conquer Algorithm
+     8. Greedy algorithm
+     9. Dynamic programming algorithm
+    10. Randomized algorithm
+
+Advantages of Algorithms:
+------------------------
+
+     -> It is easy to understand.
+     -> An algorithm is a step-wise representation of a solution to a given problem.
+
+Disadvantages of Algorithms:
+---------------------------
+
+    -> Writing an algorithm takes a long time so it is time-consuming.
+    -> Understanding complex logic through algorithms can be very difficult.
+    -> Branching and Looping statements are difficult to show in Algorithms.
+
+
+How to Design an Algorithm?
+---------------------------
+
+    -> The problem that is to be solved by this algorithm i.e. clear problem definition.
+    -> The constraints of the problem must be considered while solving the problem.
+    -> The input to be taken to solve the problem.
+    -> The output is to be expected when the problem is solved.
+    -> The solution to this problem is within the given constraints.    
+
+
+
+    
