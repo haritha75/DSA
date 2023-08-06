@@ -1,0 +1,46 @@
+PseudoCode :
+         
+-> In pseudcode their is no data types and syntaxes just normal languages like english.
+
+
+Pseudocode to find sum of two numbers:
+
+    a = 4
+    b = 15
+    c = a+b
+    print(c)
+
+How to read input:
+
+    a = input()
+
+Assigning value:
+
+    a = 5
+    b = a
+    print(b)
+
+Arithmetic operations:
+
+
+   sum = a+b
+   sub = a-b
+   mul = a*b
+   div = a/b
+   r = a mod b 
+
+Logical operations:
+
+   a > b and a < c
+   a > b or a < c
+   not a    
+
+Relational operations:
+
+   a > b
+   a >= b
+   a < b 
+   a <= b 
+   a == b 
+   a != b
+       
