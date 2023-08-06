@@ -1,0 +1,28 @@
+Pseudocode :
+ 
+          -> Pseudocode is a way of representing an anglorithm using informal, human readable language.
+          -> It is the form of plain language their is not more syntaxes.
+          -> It is easy to understand when compared to algorithm because algorithm conttains some logics also but in pseudo code total in plain text form.
+          -> If some person no idea of about programming then read Pseudocode ,they can understand  easily without knowledge on programming.
+          -> It helps to design and plan their algorithms.
+          -> It acts as a bridge between the program and algorithm.
+          -> It is a powerful tool that promotes clear thinking and efficient problem solving in the development process.
+
+
+Advantages :
+
+    1) Collaboration :
+          
+          -> It can be understood by developers with different programming backgrounds,communication within a team.
+
+    2) Clarity :
+
+          -> It uses human readable language, making it easier to undrerstand and communicate complext algorithms.
+
+    3) Planning and Design :
+
+             -> It can help to the programmmers paln and design algorithms before implementation.
+
+    4) Reduced Errors :
+
+           -> By identifyinf the logic or some errors early in development process, it can help reducing the errors in the final code.                     
