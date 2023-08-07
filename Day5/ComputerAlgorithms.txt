@@ -1,0 +1,9 @@
+Computer Algorithms :
+
+       -> Some algorithms created for and utilized by computer.
+       -> Because computer does not like human if something goes wrong human can solve that problem but computer not like whatever instruction you can based on instrctions it can perform.
+       -> To guide the computer in proper way we need computer algorithms.
+       -> Computer Algorithms are essential to guide computers in proper and organized manner to solve problems accurately.
+       -> Without algorithms,computer wouldnot know how to process information or excute tastk effectively.
+       -> Algorithms provide a structured approach to problem solving and ensure that computers follow specific steps to achieve the desired outcomes.
+       -> Implementing algorithms will help you improve your programming skills.
