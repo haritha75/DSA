@@ -1,0 +1,16 @@
+//What value will this program output when calling the function funk(n), if n=10?
+
+function funk(n):
+    a = 1
+    b = 1
+    x = 0
+    for j in (2, n - 1):
+        x = a + b
+        a = b
+        b = x
+    return x
+
+
+OutPut:
+  
+    55 because it is in the form of fibonacci series : 0 1 1 2 3 5 8 13 21 34 55. here start with 2 and it iterate 8 times.
