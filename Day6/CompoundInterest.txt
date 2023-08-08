@@ -1,0 +1,9 @@
+principal = input()
+rate = input()
+numberOfTimes = input()
+time = input()
+
+ compoundAmount = principal * ( (1+(rate/numberOfTimes)) power (numberOfTimes * time) )
+ interestEarned = compoundAmount - principal
+
+ print(interestEarned)

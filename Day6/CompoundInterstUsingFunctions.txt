@@ -1,0 +1,16 @@
+function calculateCompoundInterest(principal,rate,numberOftimes,time):
+
+    compoundAmount = principal * ( (1+(rate/numberOfTimes)) power (numberOfTimes * time) )
+    interestEarned = compoundAmount - principal
+    return interestEarned
+
+
+principal = input()
+rate = input()
+numberOfTimes = input()
+time = input()
+
+print(calculateCompoundInterest(principal,rate,numberOfTimes,time))
+
+
+
