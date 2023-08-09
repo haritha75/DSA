@@ -1,0 +1,16 @@
+n1 = input()
+n2 = input()
+n3 = input()
+
+max = n1
+
+if n2>max and  n2>n3 then 
+    return n2
+    
+elif n3>max and n3>n2 then
+    return n3
+
+else
+
+   return n1
+   

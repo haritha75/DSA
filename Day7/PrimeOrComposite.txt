@@ -1,0 +1,9 @@
+n = input()
+
+
+for i =2 to i<n SET 1
+     if n mod 2 == 0 then
+        print("Composite")
+        
+print("Prime")        
+

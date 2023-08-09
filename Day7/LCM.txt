@@ -1,0 +1,15 @@
+n1 = input()
+n2 = input()
+n3 = input()
+
+lcm = n3>(n1>n2? n1:n2)? n3 : ((n1)>n2)? n1:n2 //finding biggest number among three
+boolean flag = true
+
+ while(flag) 
+
+     if(lcm mod n1==0 && lcm mod n2==0 && lcm mod n3==0) then
+         return lcm
+         flag = false;
+            
+     lcm = lcm+1
+        

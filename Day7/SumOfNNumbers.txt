@@ -1,0 +1,9 @@
+n = input()
+SET sum =0
+
+for i =0 to i<=n SETP 1
+  
+   sum = sum+i
+
+
+print(sum)   

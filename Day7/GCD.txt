@@ -1,0 +1,10 @@
+n1 = input()
+n2 = input()
+f=1
+
+for i = n2 to i>=2 SETP -1
+ 
+    if((n1 mod i ==0) && (n2 mod i ==0)) then 
+         f = i
+         
+print(f)
