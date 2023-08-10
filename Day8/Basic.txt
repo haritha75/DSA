@@ -33,7 +33,7 @@ Data Structure Types:
 Clean Code:
 
    -> Clean code is clear,understandable and matainable.
-   -> It caontains class names are pascal case and methods,variables names are camel case.    
+   -> It contains class names are pascal case and methods,variables names are camel case.    
    -> It makes easy to understand the code.
    -> Donot use comments because already we are given meaningful names to the code then donot need comments.
 
