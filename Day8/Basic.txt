@@ -1,0 +1,52 @@
+What is Programming?
+
+   Programming:
+      
+      -> Set of instructions given to computer based on instructions computer will Performance the operations.
+      -> Programming is not about typing, it is about thinking.
+
+What is Coding?
+
+  Coding:
+
+    -> Coding tells a machine which actions to perform and how to complete tasks.
+    -> Computer doesnot understand english language that's why we are given high level language to the computer. 
+
+ Why we need Data Structure:
+
+     -> To build fast and scalable Algorithms.
+     -> Cost Saving and efficient.
+     -> Art of problem solving because their is many ways to solve problems but based on the situations and requirements we can solve the problems.
+
+Data Structure Types:
+
+    They are two types.  
+
+        Linear                                         Non-Linear
+
+    -> Arrays                                      -> graphs
+    -> LinkedList                                  -> trees
+    -> Stacks
+    -> Queues
+    -> HashMap
+
+Clean Code:
+
+   -> Clean code is clear,understandable and matainable.
+   -> It caontains class names are pascal case and methods,variables names are camel case.    
+   -> It makes easy to understand the code.
+   -> Donot use comments because already we are given meaningful names to the code then donot need comments.
+
+   DRY principle:
+    
+      -> It means donot repeat yourself if you have repeatitions then use functions because functions can be used in many times in a code.
+      -> If you write the same code in multiple places extract that into a function(reuse).
+
+  KISS principle:   
+
+      -> It means Keep it simple and stupid.
+      -> Every function should do one thing only and do it well.
+      -> Donot make code unnecessarily complex keep it simple. 
+
+
+ -> Refactoring is part of the coding process.

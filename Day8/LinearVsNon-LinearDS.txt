@@ -1,0 +1,22 @@
+Linear Data Structure:
+
+    -> In a linear data structure, data elements are arranged in a linear order.
+    -> single level is involved.
+    -> implementation is easy.
+    -> memory is not utilized in an efficient way.  
+    -> Elementa ca b e traversed in single run.
+    -> Examples are: array, stack, queue, linked list, etc.
+    -> useful for simple data storage and manipulation. 
+    -> Performance is good for simple operations.
+
+Non-Linear Data Structure:
+
+    -> In a non-linear data structure, data elements are attached in hierarchically manner.
+    -> multiple levels are involved.
+    -> implementation is complex.
+    -> memory is utilized in an efficient way.
+    -> Elements cannot be traversed in single run.
+    -> Examples are: trees, graphs etc...
+    -> useful for representing complex relationships and data hierarchies such as in social networks.
+    -> Performance can vary depending on the structure and the operation.
+
