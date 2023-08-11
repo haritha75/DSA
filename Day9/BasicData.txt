@@ -1,0 +1,44 @@
+Why we need hard disks :
+
+   -> Hard disks store large amount data.
+   -> Even if power off the data will not be removed.
+   -> for example, if you have million lines of code then it will be hard to type entire code.this type of purposes we need harddisk.
+   -> It works based on Magnetic Technology.
+
+ Why we need RAM:
+
+   -> It works based on semiconductor technology that means it  do the work very fast.CPu also works based on semiconductor technology.
+   -> but it very cost.
+   -> It does not store data permanently.whenever power off that time data will be removed.
+   -> Hard disk transfer the instructions to cpu it takes so much time that time we are using RAM because it sends instruction to cpu very fastly.because it works based on semiconductor that's why it fast. 
+
+Why we cannot store entire data in RAM:
+     
+     -> Because RAM does not store large amount of data that means doesnot have that much of space.
+     -> RAM cost is very high.
+     -> because RAM does not store the data permanently.
+
+Why computers understand binary language:
+
+    -> Because cpu made of transistors,transistors support or have only 0's and 1's.   
+
+Why we need Data structures:
+
+    -> It can storing and arranging data efficiently.
+    -> That means it organizing the data well designing manner.
+
+What is difference between databse and data structures:
+
+   -> Database is a collection of data that is stored and managed in permanent memeory and it support large amount data also.
+   -> Databse organizing the data for retrieval,updating and managing.
+   -> Data structures is a way of storing and arranging the data efficiently in temporary memeory.
+
+Difference between files and database:
+
+    -> Files can access everyone their is no proper security. 
+    -> files does not provide backup and recovery when data is lossed.
+    -> In database, it provide more security, other person cannot access the data.
+    -> Even if data loss database provide recovery and backup the data.
+
+
+
