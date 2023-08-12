@@ -1,0 +1,45 @@
+Physical Data Structure:
+
+       -> The Array and LinkedList are the two physical data structures.
+
+Why we are calling array and linked list as physical data structures?
+
+
+      -> because these two data structures decide or define how the memory is organized or how the memory is allocated.
+   
+   Array:
+      
+      -> It is a collection of contigous memeory locations.
+      -> Once size fixed we cannot increased or decreased it is stattic array.
+      -> Array will be created inside the heap based on java.
+
+     When to use the array data structure?
+
+      -> when we are sure what is the maximum number of elements that we are going to store.
+      -> that means if we know the length of the list then we need to go for the array data structure.
+
+  Linked List: 
+
+    -> The Linked List data structure is a completely dynamic data structure.
+    -> It is a collection of nodes where each node contains data and a link to the next node. 
+    -> The length of the linked list can grow and reduce dynamically.
+    -> As per requirement , you can go on and adding more and more nodes and elements or you can reduce the size.
+    -> It is created  in the heap.
+
+    When to use the linked list data structure?
+
+      ->  when we are  not sure what is the maximum number of elements that we are going to store.
+      ->  that means if we  donot know the length of the list then we need to go for the linked list data structure.
+
+Difference between the logical data structure and the physical data structure:
+
+
+      -> Physical data structures are actually meant for storing the data in the memory. 
+
+      -> Then on the stored data or values, we may be performing some operations like inserting more values or deleting existing values or searching for the values, and many more operations. 
+
+     Now, the question is, how you want to utilize those values? 
+     How you will be performing insertion and deletion? 
+     What is the discipline that you are going to follow?
+
+       -> That discipline is defined by logical data structures i.e. stack, queues, trees, graphs, and hash table.

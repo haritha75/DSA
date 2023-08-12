@@ -1,0 +1,27 @@
+Statck memory:
+  
+  -> It stores primitive data types.
+  -> It follows the LIFO order
+  -> It is not flexible because we cannot alter the allocated memeory.
+  -> It has faster access, allocation.
+  -> Memory size is very small.
+  -> It is done automatically by the compiler.
+  -> Cost is less.
+  -> Memory allocation is continuous.
+  -> It is a thread safe because each thread has its own stack.
+
+Heap memeory:
+
+    -> It stores reference type objects.
+    -> It does not faollow any order because it is a dynamic Memory allocation and it doesnot have fixed pattern for allocation.
+    -> It is flexible because we can alter the allocated memeory.
+    -> It has slower access,allocation.
+    -> Memory size is large.
+    -> It is done in manually by the programmer.
+    -> Cost is more compared to stack.
+    -> Memeory allocation is random order.
+    -> It is not thread safe. 
+    -> String also non-primitive it store inside the heap.
+    -> String literal store in inside string pool but string object store in outside the strirng pool and inside the heap.
+
+

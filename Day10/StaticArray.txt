@@ -1,0 +1,42 @@
+Static Array:
+
+  -> static array means once size is fixed it cannot changed.
+     
+         int a[]=new int[5]; like this.
+
+        -> we cannot add 6th element only 5 elments can insert.
+
+     Advantages :
+
+       -> index based access to elements is fast
+       -> Efficient since address of the element is known.
+
+    Disadvantages :
+
+       -> Fixed size we cannot change.
+       -> If you declare large size then need only small data then memory wastage.
+       -> If you declare small size then you need large data then we cannot increase the size of the array.
+
+How to calculate the address in array :
+
+     -> address = base + (size of datatype * index) 
+
+Operation On static Array :
+
+
+   1) Insertion -> Insertion can be done if you have the space in array that only we can insert other wise it shows arrayindexoutofbound exception.
+     
+       -> if you insert at the end of the array it will take 0(1) complexity in best case.
+       -> if you insert at middel it take 0(n/2) and beggining it takes 0(n) in worst case.
+
+   2) Deletion :
+    
+       -> if you delete at the end of the array it will take 0(1) complexity in best case.
+       -> if you delete at middel it take 0(n/2) and beggining it takes 0(n) in worst case.
+          
+  3) Searching :
+    
+    -> searching can be done in two ways.
+
+       1) value based it takes 0(1)
+       2) Address based it takes 0(n)
