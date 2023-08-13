@@ -1,0 +1,17 @@
+Why Companies Develop software?
+ 
+   -> Because Customer want to better services and fast which company have this qualities then customer always prefer that type of companies.
+   -> if companies develop better service and fast then automatically customers increases and get more profit and revenue.
+
+     Better Services, fast ---> more customers --> more revenue --> more profit
+
+Why Time Complexity  not meausred in seconds ?
+
+        When measuring time complexity in seconds, the result would heavily depend on the hardware and software environment in which the algorithm is running.
+    Different computers have varying processing speeds, memory capabilities, and other hardware components that can affect how fast an algorithm executes. 
+    Additionally, the same algorithm can perform differently depending on the programming language, compiler optimizations, and other software factors.
+
+        For example, imagine you have two algorithms, Algorithm A and Algorithm B. Algorithm A completes in 1 second on a fast computer with  memory, 
+    while Algorithm B takes 5 seconds on the same computer. However, if you run these algorithms on a slower computer with limited memory, Algorithm B might take just 2 seconds, 
+    and Algorithm A might take 10 seconds.
+    
