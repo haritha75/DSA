@@ -1,0 +1,19 @@
+Why Time Complexity important ?
+
+  -> Time complexity is important because it helps us understand how the performance of an algorithm scales with the size of the input data. 
+  -> It allows us to analyze and compare different algorithms to determine which one is more efficient for a given problem. 
+  -> By knowing the time complexity, we can predict how long an algorithm will take to run for large inputs and make informed decisions about which algorithm to use to achieve optimal performance.
+  -> Time complexity described in three cases
+     
+     -> Best cases
+     -> Average case
+     -> Wirst case
+
+ Big O: Describes the performance of an Algorithm.
+
+  How to check whether algorithm is scalable or not?   
+
+       -> Analyze algorithms's time complexity.
+       -> If it has a high time complexity(0(n^2)) then algorithm is not scalable.
+       ->  If it has low time complexity(0(1),0(logn),0(n)) then it is a scalable.
+       -> that means based on time complexity and space complexity we decide algorithm is scalable or not.
