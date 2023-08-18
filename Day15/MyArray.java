@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MyArray {
 
     private int items[];
@@ -53,7 +55,6 @@ public class MyArray {
         }
         return false;
 
-
     }
 
     public int firstIndexOf(int val) {
@@ -71,17 +72,90 @@ public class MyArray {
            return i;
         return -1;   
     }
+ 
+    int x =0;
+    boolean hasNext() {
+        return x!=count;
+
+    }
+    int next() {
+        return items[x++];
+
+    }
+
+    int[] toArray() {
+        int temp[]=new int[count];
+        for(int i=0;i<count;i++) {
+            temp[i]=items[i];
+        }
+        return temp;
+    }
+    
 
 
+    @Override
+    public String toString() {
 
-    public void print() {
+        int item[] = Arrays.copyOf(items,count);
+        return Arrays.toString(item);
+    }
+
+    public void trimToSize() {
+        int[] newItems = new int[count];
+        for(int i=0;i<count;i++)
+          newItems[i]=items[i];
+        
+        items=newItems;  
+    }
+
+    void subList(int start,int end) {
+        //validation
+        if(start<0 || start >=count)
+          throw new IllegalArgumentException();
+        else if(!(end>=start&&end<=count))  //end<=srart && end>=count
+           throw new IllegalArgumentException();
+        if(start==end) {
+            System.out.println("[]");
+            return;
+        }   
+
+
+        int items1[] = new int[end-start];
+
+        for(int i=start,j=0;i<end;i++)
+            items1[j++]=items[i];
+        System.out.println(Arrays.toString(items1));    
+
+    }
+
+    void sort() {
+
+        int items1[] = Arrays.copyOf(items,count);
+        Arrays.sort(items1);
+
+        for(int i=0;i<count;i++)
+           items[i]=items1[i]; //here, we are swap the items1 elements to items.
+
+    }
+
+    boolean isEmpty() {
+        return count == 0;
+    }
+
+    void clear() {
+
+         count = 0;
+    }
+
+    public int size() {
+        return count;
+    }
+
+     public void print() {
 
 
         for(int i=0;i<count;i++) //here we are using count because if you use length then default values prinitng zeros if you do  want to that then how many items we are insert then count them use here count and priting only inserting elements.
            System.out.println(items[i]);
     }
 
-    public int size() {
-        return count;
-    }
 }
