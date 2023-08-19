@@ -146,6 +146,27 @@ public class MyArray {
 
          count = 0;
     }
+    void set(int index,int val) {
+        //validation 
+        if(index<0 || index>=count)
+          throw new IllegalArgumentException();
+        items[index]=val;  
+    }
+
+    void removeRange(int start,int end) {
+        //validation
+
+        if(start<0||start>=count)
+          throw new IllegalArgumentException();
+        else if(end<start|| end>=count)
+           throw new IllegalArgumentException();
+        int removelen=end-start;
+        
+        for(int i=end;i<count;i++) {
+            items[start++] = items[i];
+        }
+        count -= removelen;
+    }
 
     public int size() {
         return count;
@@ -155,7 +176,162 @@ public class MyArray {
 
 
         for(int i=0;i<count;i++) //here we are using count because if you use length then default values prinitng zeros if you do  want to that then how many items we are insert then count them use here count and priting only inserting elements.
-           System.out.println(items[i]);
+           System.out.print(items[i]+" ");
     }
 
-}
+    void removeIfGreaterThan(int val) {
+
+         int aCount=0;
+         for(int i=0;i<count;i++) {
+            if(items[i]>val) {
+                aCount++;
+            }
+         }
+
+        int a[]=new int[count-aCount];
+        for(int i=0,j=0;i<count;i++) {
+            if(items[i]>val) {     
+                
+            }
+            else {
+                a[j++]=items[i];
+            }
+        }
+        items=a;
+        count -=aCount;
+    }
+
+    void removeIfLessThan(int val) {
+        int aCount=0;
+         for(int i=0;i<count;i++) {
+            if(items[i]<val) {
+                aCount++;
+            }
+         }
+
+        int a[]=new int[count-aCount];
+        for(int i=0,j=0;i<count;i++) {
+            if(items[i]<val) {     
+                
+            }
+            else {
+                a[j++]=items[i];
+            }
+        }
+        items=a;
+        count -=aCount;
+       
+
+    }
+    void removeEqualTo(int val) {
+        int aCount=0;
+        for(int i=0;i<count;i++) {
+            if(items[i]==val) {
+                aCount++;
+            }
+        }
+        int a[]=new int[count-aCount];
+         for(int i=0,j=0;i<count;i++) {
+            if(items[i]==val) {     
+                
+            }
+            else {
+                a[j++]=items[i];
+            }
+            
+        }
+        
+        items=a;
+        count -=aCount; 
+
+    }
+    void reverse() {
+        for(int i=count-1;i>-1;i--) {
+            System.out.print(items[i]);
+        }
+    }
+
+    void max() {
+        int max=-1;
+        for(int i=0;i<count;i++) {
+            if(items[i]>max)
+              max=items[i];
+        }
+        System.out.println(max);
+    }
+
+    void min() {
+        int min=items[0];
+        for(int i=0;i<count;i++) {
+            if(items[i]<min)
+              min=items[i];
+        }
+        System.out.println(min);
+    }
+
+    void printMiddile() {
+
+        if(count%2==0)
+            System.out.println(items[(count/2)-1]+" "+items[count/2]);
+
+        else 
+        
+             System.out.println(items[count/2]);
+
+    }
+    void insertAt(int ind,int val) {
+        //validation
+        count= count+1;
+        int a[]=new int[count];
+        if(ind<0 || ind>count)
+          throw new IllegalArgumentException();
+        
+        for(int i=0,j=0;i<a.length;i++) {
+            if(i==ind)
+              a[i]=val;
+            else 
+             a[i]=items[j++];  
+
+        }
+        items=a;
+
+    }
+    void getItemsOfLength(int val) {
+        
+        for(int i=0;i<count;i++) {
+            String s= String.valueOf(items[i]);
+            if(s.length()==val) {
+                System.out.print(items[i]+" ");
+            }
+            
+        }
+        
+    }
+   
+    void ensureCapacity(int cap) {
+       
+        int data[]=new int[cap];
+        for(int i=0;i<items.length;i++) {
+            data[i]=items[i];
+        }
+        System.out.println(items.length);
+        items=data;
+        System.out.println(items.length);
+
+       }
+
+       void intersection(int a[]) {
+
+        for(int i=0;i<a.length;i++) {
+            for(int j=0;j<count;j++) {
+                if(a[i]==items[j]) {
+                    System.out.print(items[j]+" ");
+                    break;
+                }
+            }
+        }
+       }
+        
+    }
+
+   
