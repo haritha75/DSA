@@ -1,0 +1,59 @@
+Array:
+   
+   Array store elements contiguous memory locations.
+   It allows faster access to an element at a specific index.
+   It can store same datatypes ata time.
+
+LinkedList:
+
+
+   It stores multiples datatypes at a time.
+   It does not stored in contiguous locations.
+   It also stored address of next node.
+
+
+Advantages of Arrays:
+
+   1. It stores multiple data of similar types with the same name.
+   2. It allows random access to elements.
+   3. There is memory shortage or overflow because its size is fixed.
+   4. Itnis easy to iterate the elements.
+
+Disadvatages of Arrays:
+
+
+   1. Array is static does not changed.
+   2. Insertion and  deletion operations are difficult.
+   3. If array size is big then memory will be wastage.
+
+
+
+Advantages of LinkedList:      
+
+
+     1. Dynamic size.
+     2. Easy to Inserting and Deleting elements in Array.
+     3. Flexible Iteration.
+
+
+Disadvantages of LinkedList:
+
+     1. Slower performance compared to array.
+     2. It requires more memory.
+
+
+Differences between Array and LinkedList:
+     
+
+        Array                                                          LinkedList
+
+
+    1. Array is stored in contiguous locations.                  It does not stored on contiguous locations.
+
+    2. Fixed in size.                                            Dynamic in size.
+
+    3. Memory allocated at compile time.                         Memory allocated at run time.
+
+    4. Elements accessed easily.                                 Elements accessing requires the traversal of whole linkedlist.
+
+    5. Insertion and deletion operation takes time.              Insertion and deletion operation is fast.
