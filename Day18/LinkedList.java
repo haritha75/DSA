@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class LinkedList {
 
     private class Node {
@@ -12,7 +14,7 @@ public class LinkedList {
 
         private Node head;
         private Node tail;
-
+        private int size=0;
 
     
 
@@ -26,6 +28,7 @@ public class LinkedList {
            tail.next=node; //whenever adding last node then that is the tail because we are adding at last then last node address storing to the previous tail and make.whenever node storing address that is not tail then make last node as a tail.
            tail=node;
         }     
+        size++;
         
     }
     private boolean isEmpty() {
@@ -42,7 +45,7 @@ public class LinkedList {
             node.next=head;
             head=node;  
         }  
-
+      size++;
     }
 
 
@@ -81,4 +84,66 @@ public class LinkedList {
 
         return getIndex(value)!=-1;
     }
+    public void removeFirst() {
+
+        if(isEmpty())
+          throw new NoSuchElementException();
+
+        if(head==tail)
+           head=tail=null;
+
+        else {
+            Node temp=head.next;
+            head.next=null;
+            head=temp;
+        }     
+
+        size--;
+    }
+    public void removeLast() {
+
+        if(isEmpty())
+           throw new NoSuchElementException();
+
+        if(head==tail)
+          head=tail=null;
+
+        else {
+            Node current = head;
+
+            while(current.next!=tail)
+              current = current.next;
+            
+            current.next=null;
+            tail=current;  
+
+        }     
+
+        size--;
+    }
+
+   public int size() {
+    return this.size;
+   }
+
+   public void reverse() {
+
+    if(isEmpty())
+       return;
+    
+       Node previous=head;
+       Node current=head.next;
+
+       while(current!=null) {
+          Node next=current.next;
+          current.next=previous;
+          previous=current;
+          current=next;
+       }
+
+       tail=head;
+       tail.next=null;
+       head=previous;
+   }
+    
 }
