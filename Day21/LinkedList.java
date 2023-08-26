@@ -219,7 +219,22 @@ boolean detectLoop() {
     }
     return false;
 }
+boolean detectLoop1(){
 
+    HashSet<Object> set=new HashSet<>();
+    var cur=head;
+
+    while(cur.next!=null) {
+        if(!set.contains(cur)) {
+            set.add(cur);
+            cur=cur.next;
+        }
+        else{
+            return true;
+        }
+    }
+    return false;
+}
 
     
 }
