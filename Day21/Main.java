@@ -6,21 +6,24 @@ public class Main {
 
     public static void main(String[] args) {
          LinkedList li = new LinkedList();
-//         li.addLast(22);
-//         li.addLast(40);
-//         li.addLast(28);
-//         li.addLast(57);
-//         li.addLast(32);
-//         li.addLast(99);
-         
+        li.addLast(10);
+        li.addLast(20);
+        li.addLast(10);
+        li.addLast(40);
+        li.addLast(10);
+        li.addLast(40);
+        li.addLast(10);
+       
         
        
     //    li.kthNodeFormLast(3);
     //     li.middleNode();
-        LinkedList x= LinkedList.createLoop();
+        //LinkedList x= LinkedList.createLoop();
 
         //System.out.println(x.detectLoop());
-        System.out.println(x.detectLoop1());
+       // System.out.println(x.detectLoop1());
+       li.lastIndexOf(10);
+     // System.out.println(li.valueOf(1));
 
     }
     

@@ -6,6 +6,9 @@ public class LinkedList {
     private class Node {
 
         private int value; //data value
+        Node() {
+
+        }
 
         Node(int item) {
             this.value=item;
@@ -235,6 +238,21 @@ boolean detectLoop1(){
     }
     return false;
 }
+public void lastIndexOf(int value) {
+    Node current=head;
+    int start=0;
+    int ind=-1;
+    while(current!=null) {
 
+        if(current.value==value) {
+
+            ind=start;
+        }
+        start++;
+        current=current.next;
+
+    }
+    System.out.println(ind);
+}
     
 }
