@@ -9,6 +9,7 @@ public class Main {
         dl.addFirst(87);
         dl.printValues();
         dl.printReverse();
+        System.out.println(dl.size());
     }
     
 }

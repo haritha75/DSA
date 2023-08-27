@@ -70,4 +70,7 @@ public class DoubleLinkedList {
         }
 
     }
+    public int size() {
+        return size;
+    }
 }
