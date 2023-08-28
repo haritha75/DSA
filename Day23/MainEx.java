@@ -18,10 +18,18 @@ public class MainEx {
         //System.out.println(dl.indexOf(33));
         //dl.lastIndexOf(22);
         dl.printValues();
+        System.out.println(dl.indexOf(87));
+        System.out.println(dl.indexOf(33));
+        System.out.println(dl.indexOf(22));
+        System.out.println(dl.indexOf(43));
+
         dl.reverse();
         System.out.println();
         dl.printValues();
+        System.out.println(dl.indexOf(87));
+        System.out.println(dl.indexOf(33));
         System.out.println(dl.indexOf(22));
+        System.out.println(dl.indexOf(43));
     }
     
 }

@@ -192,6 +192,7 @@ public class DoubleLinkedList {
        tail=head;
        tail.next=null;
        head=previous1;
+       head.previous=null;
     }
     public int size() {
         return size;
