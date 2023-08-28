@@ -1,4 +1,4 @@
-public class Main {
+public class MainEx {
 
     public static void main(String[] args) {
         
@@ -14,9 +14,14 @@ public class Main {
         // int arr[]={34,67,12,76,44};
         // dl.addManyAtLast(arr);
         //dl.addAt(1, 99);
-        dl.printValues();
+        //dl.printValues();
         //System.out.println(dl.indexOf(33));
-        dl.lastIndexOf(22);
+        //dl.lastIndexOf(22);
+        dl.printValues();
+        dl.reverse();
+        System.out.println();
+        dl.printValues();
+        System.out.println(dl.indexOf(22));
     }
     
 }

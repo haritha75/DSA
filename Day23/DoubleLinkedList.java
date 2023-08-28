@@ -175,6 +175,24 @@ public class DoubleLinkedList {
         }
 
     }
+    public void reverse() {
+        if(isEmpty())
+          return;
+
+       Node previous1=head;
+       Node current=head.next;
+
+       while(current!=null) {
+        Node next=current.next;
+        current.next=previous1;
+        previous1=current;
+        current=next;
+
+       }   
+       tail=head;
+       tail.next=null;
+       head=previous1;
+    }
     public int size() {
         return size;
     }

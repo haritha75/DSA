@@ -286,6 +286,14 @@ public void addAt(int value,int index) {
             size++;
             
         }
+        public void printValues() {
+
+            Node current=head;
+            while(current!=null) {
+                System.out.println(current.value);
+                current=current.next;
+            }
+        }
         
     }       
 

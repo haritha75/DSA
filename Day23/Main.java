@@ -6,13 +6,18 @@ public class Main {
 
     public static void main(String[] args) {
          LinkedList li = new LinkedList();
-        li.addLast(10);
-        li.addLast(20);
-        li.addLast(10);
+        li.addLast(11);
+        li.addLast(55);
+        li.addLast(44);
         li.addLast(40);
-        li.addLast(10);
+        li.addLast(21);
         li.addLast(40);
-        li.addLast(10);
+        li.addLast(12);
+        li.printValues();
+        li.reverse();
+        System.out.println();
+        li.printValues();
+        System.out.println(li.valueOf(0));
        
         
        
@@ -23,10 +28,10 @@ public class Main {
         //System.out.println(x.detectLoop());
        // System.out.println(x.detectLoop1());
       // li.lastIndexOf(10);
-      System.out.println(li.size());
-      li.addAt(11, 1);
-      System.out.println(li.valueOf(1));
-      System.out.println(li.size());
+    //   System.out.println(li.size());
+    //   li.addAt(11, 1);
+    //   System.out.println(li.valueOf(1));
+    //   System.out.println(li.size());
 
     }
     
