@@ -39,6 +39,7 @@ public class MainExample {
     li.printValues();
     System.out.println();
     System.out.println(li.BinaryToDec());
+    System.out.println(li.BinarytoDec1());
 
 
     }

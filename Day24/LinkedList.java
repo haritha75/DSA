@@ -308,21 +308,32 @@ public void addAt(int value,int index) {
     public int BinaryToDec() {
 
         int val=size()-1;
-        int sum=0;
-        if(size()>0) {
-
-        
-            Node current=head;
-            while(current!=null) {
-                sum *=2;
-                sum +=current.value;
-                val--;
-                current=current.next;
-            }
-
-
+        int res=0;
+        Node current=head;
+        while(current!=null) {
+            int sum=(int) Math.pow(2, val);
+            sum *=current.value;
+            res +=sum;
+            current=current.next;
+            val--;
         }
-        return sum;
+        return res;
+    }
+
+    public int BinarytoDec1() {
+        reverse();
+        int val=0;
+        int res=0;
+        Node current=head;
+        while(current!=null) {
+            int sum=(int) Math.pow(2, val);
+            sum *=current.value;
+            res +=sum;
+            current=current.next;
+            val++;
+        }
+        return res;
+       
     }
         
     }       
