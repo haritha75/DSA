@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class CircularLinkedList {
 
     private class Node {
@@ -50,6 +52,40 @@ public class CircularLinkedList {
 
         }
     }
+    public void removeFirst() {
+        if(head==null)
+            throw new NoSuchElementException();
+        if(head==head.next)   
+            head=null; 
+        else {
+            Node temp=head.next;
+            Node cur=temp;
+            while(cur!=head&&cur.next!=head) {
+                cur=cur.next;
+            }
+            head.next=null;
+            head=temp;
+            cur.next=head;
+
+
+        }    
+    }
+    public void removeLast() {
+        if(head==null)
+            throw new NoSuchElementException();
+        if(head==head.next)   
+            head=null; 
+
+        else {
+            Node temp=head;
+            Node cur=head.next;
+            while(cur!=head&&cur.next.next!=head) {
+                cur=cur.next;
+            }
+            cur.next=head;
+        }    
+
+    }
 
     public void print() {
         if(head==null)
@@ -66,4 +102,5 @@ public class CircularLinkedList {
         }
              
     }
+
 }

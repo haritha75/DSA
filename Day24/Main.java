@@ -6,6 +6,11 @@ public class Main {
         cl.addLast(23);
         cl.addFirst(11);
         cl.addFirst(54);
+        cl.addLast(11);
+        cl.print();
+       // cl.removeFirst();
+       cl.removeLast();
+        System.out.println();
         cl.print();
     }
     
