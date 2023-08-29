@@ -309,7 +309,7 @@ public void addAt(int value,int index) {
 
         int val=size()-1;
         int sum=0;
-        if(size()>=0) {
+        if(size()>0) {
 
         
             Node current=head;

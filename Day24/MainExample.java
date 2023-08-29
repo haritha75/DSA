@@ -32,7 +32,7 @@ public class MainExample {
     //   li.addAt(11, 1);
     //   System.out.println(li.valueOf(1));
     //   System.out.println(li.size());
-    li.addLast(0);
+    li.addLast(1);
     li.addLast(0);
     li.addLast(1);
     li.addLast(0);
