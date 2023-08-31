@@ -95,6 +95,32 @@ public class CircularLinkedList {
         size++;
 
     }
+
+    public void addAt(int index, int value) {
+
+        if(index < 0 || index > size)
+            throw new IllegalArgumentException();
+
+        if(index == 0) {
+            addFirstOptimized(value);
+            return;
+        }
+        if(index==size) {
+            addLastOPtimized(value);
+        } else {
+            var node = new Node(value);
+            int start = 0;
+            var current = head;
+            while (start<index-1) {
+                current = current.next;
+                start++;
+            }
+            var temp = current.next;
+            current.next = node;
+            node.next = temp;
+            size++;
+        }
+    }
     public void removeFirst() {
         if(head==null)
             throw new NoSuchElementException();
@@ -151,6 +177,31 @@ public class CircularLinkedList {
 
         size--;
 
+    }
+
+    public void removeAt(int index) {
+
+        if(index < 0 || index >= size)
+            throw new IllegalArgumentException();
+
+        if(index == 0) {
+            removeFirstOptimized();
+            return;
+        }
+        if(index == size()-1) {
+            removeLast();
+            return;
+        }
+        var current = head;
+        int start = 0;
+        while (start < index-1) {
+            current = current.next;
+            start++;
+        }
+        var temp = current.next.next;
+        current.next.next = null;
+        current.next = temp;
+        size--;
     }
     
     public int IndexOf(int value) {
@@ -209,50 +260,63 @@ public class CircularLinkedList {
         return size;
     }
 
-//     public void rightSlot(int value) {
-//         Node node=new Node(value);
+    public void rightSlot(int value) {
+        Node node=new Node(value);
 
-//         if(head==null) {
-//           head=node;
-//           node.next=node;
-//         }
-//         else if(head==head.next) {
-//             if(head.value>node.value) 
-//                addFirstOptimized(value);
-//             else 
-//                 addLastOPtimized(value);   
-//         }
-//         else {
-//             Node current=head;
+        if(head==null) {
+          head=node;
+          node.next=node;
+        }
+        else if(head==head.next) {
+            if(head.value>node.value) 
+               addFirstOptimized(value);
+            else 
+                addLastOPtimized(value);  
+          size++;       
+        }
+        else {
+            if(value<head.value)
+               addFirstOptimized(value);
+               else {
 
-//             if(current.value>=value) {
+                Node cur=head;
+                int index=1;
 
-//                 int temp=current.value;
-//                 current.value=node.value;
-//                 node.value=temp;
-//                 node.next=current.next;
-//                 current.next=node;
-
-//             }
-//             else if(current.value<value&&current.next.value>value){
-                
-//                 node.next=current.next;
-//                 current.next=node;
-                
-
-//             }
-
-//             // else  {
-//             //     addLastOPtimized(value);
-
-//             // }
-//             current=current.next;
-             
-//             addLastOPtimized(value);
+                while(cur.next!=head) {
+                    if(cur.value<node.value && cur.next.value>node.value) {
+                        addAt(index, value);
+                        return;
+                    }
+                    cur=cur.next;
+                    index++;
+                }
+                if(value>cur.value)
+                 addLastOPtimized(value);
+               }
+            
 
 
-//         }
+        }
 
-//     }
+    }
+    public void delRepeatNode() {
+        Node cur=head.next;
 
- }
+        if(head.value==head.next.value)
+            removeFirst();
+        while(cur.next!=head) {
+        if(cur.value==cur.next.value) {
+            Node temp=cur.next.next;
+            cur.value=cur.next.value;
+            cur.next.next=null;
+
+            cur.next=temp;
+        }
+        
+        cur=cur.next;
+
+    }
+}
+}
+
+ 
