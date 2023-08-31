@@ -11,6 +11,7 @@ public class CircularLinkedList {
         private Node next;
     }
     private Node head;
+    private int size=0;
 
     public void addLast(int value) {
         Node node=new Node(value);
@@ -30,6 +31,7 @@ public class CircularLinkedList {
             node.next=head;
 
         }
+        size++;
     }
     public void addLastOPtimized(int value) {
 
@@ -48,6 +50,7 @@ public class CircularLinkedList {
             head.value=temp;
             head=node;
         }
+        size++;
 
     }
 
@@ -71,6 +74,7 @@ public class CircularLinkedList {
             head=node;
 
         }
+        size++;
     }
     public void addFirstOptimized(int value) {
 
@@ -88,6 +92,7 @@ public class CircularLinkedList {
             head.next=node;
             node.next=backup;
         }
+        size++;
 
     }
     public void removeFirst() {
@@ -107,6 +112,26 @@ public class CircularLinkedList {
 
 
         }    
+        size--;
+    }
+
+    public void removeFirstOptimized() {
+
+         if(head==null)
+            throw new NoSuchElementException();
+        if(head==head.next)   
+            head=null; 
+        
+        else {
+            Node temp=head.next.next;
+            head.value=head.next.value;
+            head.next.next=null;
+            head.next=temp;
+
+        }    
+
+        size--;
+
     }
     public void removeLast() {
         if(head==null)
@@ -120,10 +145,50 @@ public class CircularLinkedList {
             while(cur!=head&&cur.next.next!=head) {
                 cur=cur.next;
             }
+            cur.next.next=null;
             cur.next=head;
         }    
 
+        size--;
+
     }
+    
+    public int IndexOf(int value) {
+        if(head.value==value)
+          return 0;
+        Node current=head.next;
+
+        int start=1;
+
+        while(current!=head) {
+           if(current.value==value) 
+             return start;
+           current = current.next;
+           start++;  
+        }
+        return -1;
+   }
+   public int lastIndexOf(int value) {
+    Node current=head.next;
+    int start=1;
+    int ind=-1;
+
+    if(head.value==value)
+       ind=0;
+       
+    while(current!=head) {
+
+        if(current.value==value) {
+
+            ind=start;
+        }
+        start++;
+        current=current.next;
+
+    }
+    return ind;
+    
+}
 
     public void print() {
         if(head==null)
@@ -140,5 +205,54 @@ public class CircularLinkedList {
         }
              
     }
+    public int size() {
+        return size;
+    }
 
-}
+//     public void rightSlot(int value) {
+//         Node node=new Node(value);
+
+//         if(head==null) {
+//           head=node;
+//           node.next=node;
+//         }
+//         else if(head==head.next) {
+//             if(head.value>node.value) 
+//                addFirstOptimized(value);
+//             else 
+//                 addLastOPtimized(value);   
+//         }
+//         else {
+//             Node current=head;
+
+//             if(current.value>=value) {
+
+//                 int temp=current.value;
+//                 current.value=node.value;
+//                 node.value=temp;
+//                 node.next=current.next;
+//                 current.next=node;
+
+//             }
+//             else if(current.value<value&&current.next.value>value){
+                
+//                 node.next=current.next;
+//                 current.next=node;
+                
+
+//             }
+
+//             // else  {
+//             //     addLastOPtimized(value);
+
+//             // }
+//             current=current.next;
+             
+//             addLastOPtimized(value);
+
+
+//         }
+
+//     }
+
+ }
