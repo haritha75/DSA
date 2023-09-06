@@ -24,10 +24,10 @@ public class DoubleLinkedList {
         else {
             Node cur =head.next;
 
-            while(cur!=null) {
+            while(cur.next!=null) {
                 cur=cur.next;
             }
-            cur=node;
+            cur.next=node;
         }
     }
 
@@ -41,10 +41,10 @@ public class DoubleLinkedList {
         else {
             Node cur=head.up;
 
-            while(cur!=null) {
+            while(cur.up!=null) {
                 cur=cur.up;
             }
-            cur=node;
+            cur.up=node;
         }
     }
 
