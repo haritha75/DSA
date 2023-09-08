@@ -1,6 +1,22 @@
 public class DoubleLinkedList {
-    //Node headnext;
-    //Node headup;
+
+    public static void main(String[] args) {
+        
+        DoubleLinkedList dl=new DoubleLinkedList();
+        dl.addNext(54);
+        dl.add1(56);
+        dl.add1(43);
+        dl.add(57);
+        dl.add(12);
+        dl.add(13);
+        dl.printNextNodes();
+        System.out.println();
+        dl.printUpNodes();
+
+        System.out.println(dl.head.value);
+        System.out.println(dl.search(56));
+    }
+
     Node head;
 
     class Node {
@@ -17,12 +33,12 @@ public class DoubleLinkedList {
     void addNext(int value) {
         Node node=new Node(value);
 
-        if(head.next==null) {
-            head.next=node;
+        if(head==null) {
+            head=node;
         }
 
         else {
-            Node cur =head.next;
+            Node cur =head;
 
             while(cur.next!=null) {
                 cur=cur.next;
@@ -34,12 +50,12 @@ public class DoubleLinkedList {
     void addUp(int value) {
         Node node=new Node(value);
 
-        if(head.up==null) {
-            head.up=node;
+        if(head==null) {
+            head=node;
         }
 
         else {
-            Node cur=head.up;
+            Node cur=head;
 
             while(cur.up!=null) {
                 cur=cur.up;
@@ -48,14 +64,112 @@ public class DoubleLinkedList {
         }
     }
 
-    public void traverse(Node node) {
+    void printNextNodes() {
+        Node cur=head;
 
-        if(node==null) 
-            return;
-
-        System.out.println(node.value);
-        traverse(node.next);  
+        while(cur!=null) {
+            System.out.println(cur.value);
+            cur=cur.next;
+        }
     }
 
-    
+    void printUpNodes() {
+        Node cur=head;
+
+        while(cur!=null) {
+            System.out.println(cur.value);
+            cur=cur.up;
+        }
+    }
+
+    void add(int value) {
+        if(value<head.value)
+            addUp(value);
+        else 
+           addNext(value);    
+    }
+
+    void add1(int value) {
+
+        Node node=new Node(value);
+
+        if(head==null){
+            addNext(value);
+            return;
+
+        }
+
+        Node current=head;
+
+        while(current!=null) {
+
+            if(current.value>value) {
+
+                if(current.up==null) {
+
+                    current.up=new Node(value);
+                    return;
+
+                }
+                current=current.up;
+            }
+              else {
+
+                if(current.next==null) {
+                    current.next=new Node(value);
+                    return;
+                }
+
+                current=current.next;
+              
+            }
+
+        }    
+
+       
+    }
+
+    public boolean search(int val) {
+
+        if(head==null) 
+           throw new IllegalStateException(); 
+
+        if(head.value==val)
+           return true;   
+           
+           Node current=head;
+
+           while(current!=null) {
+
+            if(current.value>val) {
+
+              if(current.up!=null) {
+
+                if(current.up.value==val) {
+                    return  true;
+                }
+
+            }
+            current=current.up;
+                   
+            }
+
+            else {
+
+                if(current.next!=null) {
+                    if(current.next.value==val) {
+                        return true;
+                    }
+                }
+                current=current.next;
+
+            }
+           }
+
+           return false;
+
+    }
 }
+
+    
+
