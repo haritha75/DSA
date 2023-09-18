@@ -18,11 +18,12 @@ public class MainExample {
          
         //   l3.traverse(l3.head);
 
-        l1.addLast(33);
-        l1.addLast(98);
-        l1.addLast(22);
-        l1.addLast(11);
-        l1.addLast(22);
+        l1.addLast(36);
+        // l1.addLast(98);
+        // l1.addLast(36);
+        // l1.addLast(22);
+        // l1.addLast(11);
+        // l1.addLast(22);
 
        // l1.keyValues(2);
        //l1.reverse();
@@ -38,7 +39,10 @@ public class MainExample {
   // l1.removeDup();
    //l1.printValues();
   // l1.LastNNodes(3);
-   l1.removeDup();
+   //l1.removeDup();
+  // l1.removeDuplicates();
+  // l1.middleNode();
+  l1.lastNNodes1(2);
    l1.printValues();
        
     

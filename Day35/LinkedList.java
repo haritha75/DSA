@@ -625,21 +625,59 @@ public void addAt(int value,int index) {
                 previous.next=temp;
                 current=previous.next;
                 
-
-
             }
               
-
-
-
         }
 
     }
-   
+    public void removeDuplicates() {
 
-   
+        Node current=head;
+        Node newCurrent=current.next;
+        Node previous=current;
+
+        while(current!=null) {
+            while(newCurrent!=null) {
+                if(current.value!=newCurrent.value) {
+                    previous=newCurrent;
+                    newCurrent=newCurrent.next;
+                }
+                else {
+                    Node temp=newCurrent.next;
+                    newCurrent.next=null;
+                    previous.next=temp;
+                    newCurrent=previous.next;
+
+                }
+
+            }
+            current=current.next;
+            newCurrent=current.next;
+            previous=current;
+        }
+    } 
+
+    public void lastNNodes1(int n) {
+
+        if(n>size || n<0)
+           throw new IllegalArgumentException();
+
+        Node first=head;
+        Node second=head;
+        for(int i=0;i<n;i++) {
+            second=second.next;
+        }
+        if(second==null) {
+             head=first;
+             return;
+        }
+
+        while(second!=tail){
+            first=first.next;
+            second=second.next;
+        }
+        head=first.next;
+
+    }
         
     }       
-
-
-
