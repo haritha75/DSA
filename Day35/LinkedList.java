@@ -633,27 +633,23 @@ public void addAt(int value,int index) {
     public void removeDuplicates() {
 
         Node current=head;
-        Node newCurrent=current.next;
-        Node previous=current;
+        Node newCurrent=current;
 
         while(current!=null) {
-            while(newCurrent!=null) {
-                if(current.value!=newCurrent.value) {
-                    previous=newCurrent;
+            while(newCurrent.next!=null) {
+                if(current.value!=newCurrent.next.value) {
                     newCurrent=newCurrent.next;
                 }
                 else {
-                    Node temp=newCurrent.next;
-                    newCurrent.next=null;
-                    previous.next=temp;
-                    newCurrent=previous.next;
+                    Node temp=newCurrent.next.next;
+                    newCurrent.next.next=null;
+                    newCurrent.next=temp;
 
                 }
 
             }
             current=current.next;
-            newCurrent=current.next;
-            previous=current;
+            newCurrent=current;
         }
     } 
 
