@@ -37,8 +37,8 @@ public class MainExample {
    // l1.traverse(l1.segregate(l1.head));
   // l1.removeDup();
    //l1.printValues();
-   l1.LastNNodes(3);
-  // l1.removeDup();
+  // l1.LastNNodes(3);
+   l1.removeDup();
    l1.printValues();
        
     

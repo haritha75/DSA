@@ -603,6 +603,40 @@ public void addAt(int value,int index) {
 
     }
 
+    
+    public void removeDup() {
+
+        HashSet<Integer> set=new HashSet<>();
+
+        Node current = head.next;
+        Node previous=head;
+        set.add(head.value);
+
+        while(current!=null) {
+
+            if(!set.contains(current.value)) {
+               set.add(current.value);
+                previous=current;
+                current=current.next;
+            }
+            else {
+                Node temp=current.next;
+                current.next=null;
+                previous.next=temp;
+                current=previous.next;
+                
+
+
+            }
+              
+
+
+
+        }
+
+    }
+   
+
    
         
     }       
