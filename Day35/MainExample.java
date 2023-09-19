@@ -6,8 +6,8 @@ public class MainExample {
 
     public static void main(String[] args) {
           LinkedList l1 = new LinkedList();
-          l1.addLast(33);
-          l1.addLast(32);
+          l1.addLast(1);
+          l1.addLast(2);
 
         //   LinkedList l2=new LinkedList();
         //   l2.addLast(46);
@@ -17,8 +17,9 @@ public class MainExample {
 
          
         //   l3.traverse(l3.head);
-
-        l1.addLast(36);
+        l1.addLast(3);
+        l1.addLast(2);
+        l1.addLast(1);
         // l1.addLast(98);
         // l1.addLast(36);
         // l1.addLast(22);
@@ -42,8 +43,10 @@ public class MainExample {
    //l1.removeDup();
   // l1.removeDuplicates();
   // l1.middleNode();
-  l1.lastNNodes1(3);
-   l1.printValues();
+  //l1.lastNNodes1(3);
+  //System.out.println(l1.isPalindrome());
+  //l1.printValues();
+  l1.intersectionPoint();
        
     
 

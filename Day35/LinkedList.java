@@ -680,5 +680,76 @@ public void addAt(int value,int index) {
         head=first.next;
 
     }
+    public boolean isPalindrome() {
+
+      if(isEmpty())
+      throw new IllegalStateException();
+
+    var first=head;
+    var second=head;
+
+    StringBuffer str=new StringBuffer();
+    
+    while(second!=tail&&second.next!=tail) {
+        str.append(first.value);
+        first=first.next;
+        second=second.next.next;
+    }
+    StringBuffer str1=new StringBuffer();
+     var current=first;
+     if(second!=tail)
+         str.append(first.value);
+
+     current=first.next;
+     
+     while(current!=null) {
+        str1.append(current.value);
+        current=current.next;
+
+     }
+     str1.reverse();
+
+     return str.compareTo(str1)==0;
+
+   
+
+    }
+    public void intersectionPoint() {
+       Node head1;
+       Node head2;
+
+       Node node=new Node(5);
+       head1=node;
+       Node node1=new Node(4);
+       head2=node1;
+
+       node =new Node(6);
+       head1.next=node;
+
+       node1=new Node(7);
+       head2.next=node1;
+
+       node1=new Node(8);
+       head1.next.next=node1;
+       head2.next.next=node1;
+       
+       node1 = new Node(9);
+       head2.next.next.next=node1;
+       while(head2!=null) {
+        Node current=head1;
+
+        while(current!=null) {
+            if(head2==current) {
+              System.out.println(head2.value);
+              return;
+            }
+            current=current.next;
+
+        }
+          head2=head2.next;
+
+       }
+    
+    }
         
     }       
