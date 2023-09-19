@@ -795,6 +795,131 @@ public void addAt(int value,int index) {
        }
 
        }
+
+       public boolean isPalindrome1() {
+
+        String s="";
+        var current=head;
+        while(current!=null) {
+            s +=current.value;
+            current=current.next;
+        }
+        int j=s.length()-1;
+        for(int i=0;i<s.length()/2;i++) {
+            if(s.charAt(i)!=s.charAt(j)) {
+                return false;
+            }
+            j--;
+        }
+        return true;
+        
+       }
+      
+
+       public void intersectionPoint1() {
+
+       Node head1;
+       Node head2;
+
+       Node node=new Node(5);
+       head1=node;
+       Node node1=new Node(4);
+       head2=node1;
+
+       node =new Node(6);
+       head1.next=node;
+
+       node1=new Node(7);
+       head2.next=node1;
+
+       node1=new Node(11);
+       head1.next.next=node1;
+       head2.next.next=node1;
+       
+       node1 = new Node(9);
+       head1.next.next.next=node1;
+
+       Node first=head1;
+       Node second=head2;
+
+       int count=0,count1=0;
+       while(first!=null||second!=null) {
+        if(first!=null) {
+            count++;
+            first=first.next;
+
+        }
+        if(second!=null) {
+            count1++;
+            second=second.next;
+        }
+       }
+       int different=count-count1;
+       if(different>=0) {
+        Node current=head1;
+        for(int i=0;i<different;i++) {
+            current=current.next;
+        }
+        Node current1=head2;
+        while(current!=null) {
+            if(current!=current1) {
+                current=current.next;
+                current1=current1.next;
+            }
+            else {
+                System.out.println(current.value);
+                return;
+            }
+        }
+       }
+       else {
+
+        int diff=Math.abs(different);
+        Node current=head2;
+        for(int i=0;i<diff;i++) {
+            current=current.next;
+
+        }
+        Node current1=head1;
+        while(current!=null) {
+            if(current!=current1) {
+                current=current.next;
+                current1=current1.next;
+            }
+            else {
+                System.out.println(current.value);
+                return;
+            }
+        }
+
+       }
+
+        
+       }
+
+        public boolean isPalindrome2() {
+        int sum=0;
+        Node current=head;
+
+        while(current!=null) {
+
+            sum =current.value+(sum*10);
+            current=current.next;
+        }
+        
+        int res=sum;
+        int rev=0,rem;
+
+        while(sum>0) {
+
+            rem=sum%10;
+            rev=(rev*10)+rem;
+            sum=sum/10;
+        }
+         return res==rev;
+       
+        }
+      
     }
         
          
