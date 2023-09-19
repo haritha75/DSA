@@ -751,5 +751,50 @@ public void addAt(int value,int index) {
        }
     
     }
+    public void intersectionValue() {
+       Node head1;
+       Node head2;
+
+       Node node=new Node(5);
+       head1=node;
+       Node node1=new Node(4);
+       head2=node1;
+
+       node =new Node(6);
+       head1.next=node;
+
+       node1=new Node(7);
+       head2.next=node1;
+
+       node1=new Node(8);
+       head1.next.next=node1;
+       head2.next.next=node1;
+       
+       node1 = new Node(9);
+       head2.next.next.next=node1;
+
+       HashSet<Node> set = new HashSet<>();
+
+       while(head1!=null) {
+           set.add(head1);
+           head1=head1.next;
+       }
+
+       while(head2!=null) {
+
+        if(!set.contains(head2)) {
+            set.add(head2);
+            head2=head2.next;
+
+        }
+        else {
+            System.out.println(head2.value);
+            return;
+        }
+
+       }
+
+       }
+    }
         
-    }       
+         

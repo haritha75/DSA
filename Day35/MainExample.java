@@ -46,7 +46,8 @@ public class MainExample {
   //l1.lastNNodes1(3);
   //System.out.println(l1.isPalindrome());
   //l1.printValues();
-  l1.intersectionPoint();
+  //l1.intersectionPoint();
+  l1.intersectionValue();
        
     
 
