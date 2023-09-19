@@ -657,9 +657,14 @@ public void addAt(int value,int index) {
 
         if(n>size || n<0)
            throw new IllegalArgumentException();
+           Node first=head;
+           Node second=head;
 
-        Node first=head;
-        Node second=head;
+        if(n==0) {
+            head=first;
+            return;
+        }
+             
         for(int i=0;i<n;i++) {
             second=second.next;
         }
