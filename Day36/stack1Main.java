@@ -2,7 +2,7 @@ public class stack1Main {
 
     public static void main(String[] args) {
         
-        Stack1 stack1 = new Stack1();
+        Stack1 stack1 = new Stack1(5);
         // stack1.push(12);
         // stack1.push(45);
         // stack1.push(66);

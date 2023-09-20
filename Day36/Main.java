@@ -13,9 +13,17 @@ public class Main {
      //  cl.removeLast();
         System.out.println();
         //cl.print();
-        cl.twoHalves();
-        System.out.println("first half:");
-        cl.print();
+        // cl.twoHalves();
+        // System.out.println("first half:");
+        // cl.print();
+
+        // Node node[]=cl.splitTwoHalves();
+        // cl.print(node[1]);
+        // cl.exchangeFirstAndLast();
+        // cl.print();
+        System.out.println(cl.isCircularLinkedList());
+
+        
         
     }
     

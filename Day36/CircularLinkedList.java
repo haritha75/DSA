@@ -1,15 +1,15 @@
 import java.util.NoSuchElementException;
-
-public class CircularLinkedList {
-
-    private class Node {
-        private int value;
+ class Node {
+         int value;
         Node(int item) {
             this.value=item;
 
         }
-        private Node next;
+         Node next;
     }
+public class CircularLinkedList {
+
+    
     private Node head;
     private int size=0;
 
@@ -150,6 +150,78 @@ public class CircularLinkedList {
                 System.out.println(cur.value);
                 cur=cur.next;
             }
+
+    }
+    public Node[] splitTwoHalves() {
+        if(head==null)
+           throw new IllegalStateException();
+
+        Node first=head;
+        Node second=head;
+        Node head2;
+        Node node[]=new Node[2];
+
+        while(second.next!=head && second.next.next!=head) {
+            first=first.next;
+            second=second.next.next;
+            node[0]=first;
+            node[1]=second;
+            return node;
+
+        }
+        var temp=first.next;
+        first.next=head;
+        head2=temp;
+        if(second.next==head)
+           second.next=head2;
+        if(second.next.next==head)
+          second.next.next=head2;
+          
+          node[0]=first;
+          node[1]=second;
+
+          return node;
+
+    }
+    public void print(Node node) {
+        if(node!=null) {
+            System.out.println(node.value+" ");
+            var current=node.next;
+            while(current.next!=node) {
+                System.out.println(current.value);
+                current=current.next;
+            }
+        }
+        System.out.println();
+    }
+
+    public void exchangeFirstAndLast() {
+
+        if(head==null)
+           throw new IllegalStateException();
+           Node current=head;
+
+           while(current.next!=head) {
+            current=current.next;
+
+           }
+           int temp=current.value;
+           current.value=head.value;
+           head.value=temp;
+    }
+    public boolean isCircularLinkedList() {
+        if(head==null)
+           throw new IllegalStateException();
+        if(head.next==head)
+           return true;
+        Node current=head.next;
+        while(current!=head) {
+            if(current.next!=head)
+                current=current.next;
+            else 
+              return  true;
+        }
+        return false;
 
     }
 

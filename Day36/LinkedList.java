@@ -962,6 +962,42 @@ public void addAt(int value,int index) {
             System.out.println(head.value);  
 
         } 
+
+        public static LinkedList loopCreate() {
+            var list=new LinkedList();
+            list.addLast(2);
+            list.addLast(5);
+            list.addLast(9);
+            var backUp=list.tail;
+
+            list.addLast(7);
+            list.addLast(15);
+            list.addLast(54);
+            list.tail.next=backUp;
+
+            return list;
+
+        }
+
+        public int lengthOfLoop() {
+            Node fast=head;
+            Node slow=head;
+            int count=1;
+            while(fast!=null && fast.next!=null) {
+                fast=fast.next.next;
+                slow=slow.next;
+            
+                if(slow==fast) {
+                    while(slow.next!=fast) {
+                        count++;
+                        slow=slow.next;
+                    }
+                return count;
+
+                }
+            }
+            return 0;
+        }
       
     }
         

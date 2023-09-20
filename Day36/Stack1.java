@@ -4,6 +4,7 @@ import java.util.Stack;
 
 public class Stack1 {
 
+    
 
      private class Node {
 
@@ -21,13 +22,23 @@ public class Stack1 {
         Node top;
         private Node tail;
         private int size=0;
+        private int count=0;
 
+    Stack1(int size1) {
+        this.count=size1;
+    }
 
     public void push(int item) {
+
+       if(isFull())
+         throw new StackOverflowError();
 
         addFirst(item);
 
     }    
+    public boolean isFull() { //stack is dynamic in size but if you want to then write like this.
+        return size()==count;
+    }
 
     boolean isEmpty() {
         return top==null;

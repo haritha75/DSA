@@ -22,9 +22,14 @@ public class MainExample {
         l1.addLast(3);
 
        //System.out.println(l1.isPalindrome1());
-       System.out.println(l1.isPalindrome2());
-       l1.intersectionPoint1();
-       l1.reverseRecursion(l1.head);
+      //  System.out.println(l1.isPalindrome2());
+      //  l1.intersectionPoint1();
+      //  l1.reverseRecursion(l1.head);
+    //  LinkedList c=LinkedList.createLoop();
+    //  System.out.println(c.detectLoop());
+    LinkedList x= LinkedList.loopCreate();
+    System.out.println(x.lengthOfLoop());
+
        
     
 
