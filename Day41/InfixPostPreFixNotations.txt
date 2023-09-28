@@ -1,0 +1,23 @@
+"infix," "postfix," and "prefix" are notations used to represent mathematical expressions.
+
+    Infix Notation:
+        Infix notation is the most common way of writing mathematical expressions, where operators are placed between operands.
+        For example, in the expression "3 + 5," the operator "+" is placed between the operands "3" and "5."
+
+    Postfix Notation (also known as Reverse Polish Notation or RPN):
+        Postfix notation represents expressions by placing operators after their operands.
+        For example, the expression "3 + 5" in postfix notation would be written as "3 5 +."
+        Postfix notation is useful for easy evaluation of expressions using a stack-based algorithm.
+
+    Prefix Notation (also known as Polish Notation):
+        Prefix notation represents expressions by placing operators before their operands.
+        For example, the expression "3 + 5" in prefix notation would be written as "+ 3 5."
+        Like postfix notation, prefix notation is also used for efficient evaluation algorithms.
+
+The main uses of these notations are as follows:
+
+    Infix notation is the most familiar to humans and is often used in everyday mathematical expressions.
+    Postfix and prefix notations are more suitable for computer processing and are commonly used in programming languages and 
+    calculators because they eliminate the need for parentheses to specify the order of operations. They also simplify parsing and evaluation.
+
+When using postfix or prefix notations, you can easily evaluate expressions using stacks or recursive algorithms.
