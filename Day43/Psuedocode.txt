@@ -1,0 +1,18 @@
+Psuedo Code:
+
+
+1. Create a Stack
+
+2. Iterate the expression
+
+3. If c is operand add it to the result or output
+        ( : push to the Stack
+        ) : Pop from stack and add to result or output until opening bracket
+        
+    else
+        if stack is empty
+            push it to stack
+        else
+            compare with peek means top element
+                if higher precedence push to stack
+                else pop and add to result or output until lower precedence found
