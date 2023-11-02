@@ -1,0 +1,29 @@
+BinarySearchTree :
+  
+    -> It is a binary tree data structure where each node has at most two children, one is left child and another one is right child.
+    -> Using binary searching tree we can achieve time complexity O(logn) for inserting ,deleting and searching.
+
+Applications:
+
+
+    Dictionary: BSTs can be used to implement dictionary data structures, providing quick access to word definitions and supporting operations like inserting, deleting, and searching for words.
+
+    Phonebook: Phonebook applications can use BSTs to store contact information, making it easy to search for a person's details by their name or phone number.
+
+    File System Indexing: Many file systems use BSTs to organize and index files and directories, enabling fast file retrieval and management.  
+
+    Library Catalogs: BSTs can help manage library catalogs, allowing users to search for books, authors, and other library materials efficiently.
+
+    Auto-Complete and Spell-Checking: BSTs are employed in auto-complete and spell-checking applications to quickly suggest and validate words while typing.
+
+ Advantages :
+
+ -> Easy to impliment.
+ -> Insertion and deletion operations fast and also searching.
+ -> Memeory efficient.
+
+ Disadvantages:
+
+ -> slow performance in worst case.
+ -> Unbalanced trees.
+ -> Space inefficient.       
