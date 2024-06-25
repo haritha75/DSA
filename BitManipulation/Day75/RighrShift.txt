@@ -1,0 +1,22 @@
+if you apply negative value to the right shift then always first signed bit will be 1 otherwise 0.
+
+a = -5
+    0 0 0 1 0 1
+
+    1 1 1 0 1 0 -- 1's complement
+              1 -- adding both 
+    -----------
+    1 1 1 0 1 1 -- >>1 that means right one bit removed and in first place put the signed value here negative means 1 then put into 1 in the first value
+    1 1 1 1 0 1 -- answer
+
+
+a = -10
+
+    0 0 1 0 1 0    
+
+    1 1 0 1 0 1 -- 1's complement
+              1
+    -----------
+    1 1 0 1 1 0 -- 1+1 means 2 in bunary 1 0 here one will be carried and put 0 value it is the 2's complement then >>2
+
+    1 1 1 1 0 1 -- here right two bits removed and in first placing two bits with 1 becaause signed bit is 1 negative means 1.
