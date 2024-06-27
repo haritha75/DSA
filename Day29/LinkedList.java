@@ -16,7 +16,7 @@ public class LinkedList {
         private Node next; //address of the node
     }
 
-        private Node head;
+        Node head;
         private Node tail;
         private int size=0;
 
@@ -308,22 +308,249 @@ public void addAt(int value,int index) {
     public int BinaryToDec() {
 
         int val=size()-1;
-        int sum=0;
-        if(size()>=0) {
+        int res=0;
+        Node current=head;
+        while(current!=null) {
+            int sum=(int) Math.pow(2, val);
+            sum *=current.value;
+            res +=sum;
+            current=current.next;
+            val--;
+        }
+        return res;
+    }
 
-        
-            Node current=head;
-            while(current!=null) {
-                sum *=2;
-                sum +=current.value;
-                val--;
-                current=current.next;
-            }
+    public int BinarytoDec1() {
+        reverse();
+        int val=0;
+        int res=0;
+        Node current=head;
+        while(current!=null) {
+            int sum=(int) Math.pow(2, val);
+            sum *=current.value;
+            res +=sum;
+            current=current.next;
+            val++;
+        }
+        return res;
+       
+    }
 
+    public void traverse(Node node) {
+
+        if(node==null) 
+            return;
+
+        System.out.println(node.value);
+        traverse(node.next);  
+    }
+
+    public void insertLastRecursion(Node node,int value) {
+
+        if(node==null) {
+           head=new Node(value);
+           return;
+        }
+
+        else if(node.next==null) {
+            node.next=new Node(value);
+            return;
 
         }
-        return sum;
+        insertLastRecursion(node.next, value);
+
+
+    }
+
+    public void removeLastRec(Node node) {
+        if(node==null)
+           throw new IllegalStateException();
+        else if(node.next==null) {
+            head=null;
+            return;
+        }   
+
+        else if(node.next.next==null) {
+            node.next=null;
+            return;
+        }
+
+        removeLastRec(node.next);
+    }
+
+    public void insertAtRight(int value) {
+
+        Node node=new Node(value);
+
+        if(head==null) 
+           head=node;
+        else if(node.value<head.value) {
+
+            node.next=head;
+            head=node;
+        }   
+        else {
+            Node cur=head;
+
+            while(cur.next!=null && cur.next.value<node.value) {
+                cur=cur.next;
+            }
+            node.next=cur.next;
+            cur.next=node;
+        }
+
+    }
+
+    public LinkedList joinTwoList(LinkedList l1,LinkedList l2) {
+
+        if(l1.head==null) {
+            l1.head=l2.head;
+
+            return l1;
+            
+        }
+
+        if(l2.head==null) {
+            return l1;
+        }
+        else {
+
+            Node current=l1.head;
+
+            while(current.next!=null) {
+                current=current.next;
+            }
+            current.next=l2.head;
+            return l1;
+        }
+    }
+
+    public LinkedList joinTwoList1(LinkedList l1,LinkedList l2,Node node) {
+
+        if(l1.head==null) {
+            l1.head=l2.head;
+
+            return l1;
+            
+        }
+
+        if(l2.head==null) {
+            return l1;
+        }
+         else if(node.next==null){
+
+                node.next=l2.head;
+                return l1;
+
+         }
+
+        joinTwoList1(l1, l2,node.next);
+        return l1;
+
+
+
+    }
+     public void keyReverse(int k) {
+
+        if(head==null)
+          return;
+        if(k>size || k<=0)
+           throw new IllegalStateException();
+        if(k==1)
+           return;
+           
+        int start=2;   
+
+         Node previous=head;
+         Node current=head.next;
+
+         while(current!=null) {
+           Node next=current.next;
+           current.next=previous;
+           previous=current;
+           current=next;
+           if(k==start) {
+
+            head.next=current;
+            head=previous;
+            return;
+           }
+
+           start++;
+       }
+         
+    }
+
+    public void reverseKNodes(int k) {
+
+        if(head==null)
+          throw new IllegalStateException();
+
+        if(head.next==null) {
+            traverse(head);
+            return;
+        }
+
+
+        Node previous=head;
+        Node current=head.next;
+        Node next=current.next;
+
+        int count=1;
+
+        while(count<k) {
+
+            current.next=previous;
+            previous=current;
+            current=next;
+
+            if(current==null)
+             break;
+
+           next=current.next;
+           count++;  
+        }
+
+        head.next=current;
+        head=previous;
+        traverse(head);
+             
+    }
+
+    public void reverseNodes(int k) {
+
+        if(head==null ||k<=0 || k>size)
+            throw new IllegalStateException();
+         
+        if(k==1)
+          return;    
+
+        int start=2;
+        int v=start;
+        
+        Node previous=head;
+        Node current=head.next;
+
+        while(current!=null) {
+
+            Node next=current.next;
+
+            current.next=previous;
+            previous=current;
+            current=next;
+            if(k==start) {
+
+                head.next=current;
+                head=previous;
+                
+            }
+
+            start++;
+        }
+
     }
         
     }       
+
+
 

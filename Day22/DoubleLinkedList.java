@@ -29,6 +29,48 @@ public class DoubleLinkedList {
         size++;
     }
 
+    public void addManyAtLast(int arr[]) {
+        for(var x:arr)
+          addLast(x);
+    }
+
+    public void addManyAtFirst(int arr[]) {
+        for(var x:arr)
+          addFirst(x);
+    }
+
+    public void addAt(int index,int value) {
+        if(index<0 || index>size) 
+           throw new IllegalArgumentException();
+        if(index==0) {
+            addFirst(value);
+            size++;
+            return;
+
+        }
+        else if(index==size) {
+            addLast(value);
+            size++;
+            return;
+
+        }
+        
+            Node node = new Node(value);
+            int start=0;
+            Node current=head;
+            while(start<index-1) {
+                current=current.next;
+                start++;
+            }
+
+            current.next.previous=node;
+            node.next=current.next;
+            current.next=node;
+            node.previous=current;
+            size++;
+              
+    }
+    
      private boolean isEmpty() {
         return head==null;
     }
@@ -49,6 +91,69 @@ public class DoubleLinkedList {
         }   
        size++;
     }
+
+    public void removeFirst() {
+
+        if(isEmpty()) 
+          throw new IllegalStateException();
+
+        if(head==tail)
+           head=tail=null;
+
+        else {
+            Node temp=head.next;
+            head.next=null;
+            head=temp;
+            head.previous=null;
+        }    
+        size--; 
+    }
+
+    public void removeLast() {
+
+        if(isEmpty()) 
+          throw new IllegalStateException();
+
+        if(head==tail)
+           head=tail=null;
+
+        else {
+            Node temp=tail.previous;
+            tail.previous=null;
+            tail=temp;
+            tail.next=null;
+
+        }
+        size--;
+    }
+
+    public int indexOf(int value) {
+
+        Node current=head;
+
+        int start=0;
+
+        while(current!=null) {
+           if(current.value==value) 
+             return start;
+           current = current.next;
+           start++;  
+        }
+        return -1;
+    }
+    public void lastIndexOf(int value) {
+
+        Node current=tail;
+        int start=size()-1;
+        while(current!=null) {
+            if(current.value==value)   
+               System.out.println(start);
+            current=current.previous;
+            start--;   
+               
+        }
+    }
+
 
     public void printValues() {
 
