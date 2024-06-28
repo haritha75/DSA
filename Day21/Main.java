@@ -22,8 +22,11 @@ public class Main {
 
         //System.out.println(x.detectLoop());
        // System.out.println(x.detectLoop1());
-       li.lastIndexOf(10);
-     // System.out.println(li.valueOf(1));
+      // li.lastIndexOf(10);
+      System.out.println(li.size());
+      li.addAt(11, 1);
+      System.out.println(li.valueOf(1));
+      System.out.println(li.size());
 
     }
     

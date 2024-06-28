@@ -254,5 +254,38 @@ public void lastIndexOf(int value) {
     }
     System.out.println(ind);
 }
+public void addAt(int value,int index) {
+   
+    if(index<0 || index>size())
+       throw new IllegalArgumentException();
+
+
+        if(index==0) {
+            addFirst(value);
+            size++;
+            return;
+        }
+        if(index==size()) {
+            addLast(value);
+            size++;
+            return;
+        }
     
-}
+        Node node=new Node(value);
+        Node current=head;
+
+        int start=0;
+    
+            if(start<index-1) {
+                current=current.next;
+                start++;
+            
+            }
+            node.next=current.next;
+            current.next=node;
+            size++;
+            
+        }
+        
+    }       
+
