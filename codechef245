@@ -1,0 +1,27 @@
+// Node is defined as:
+// class Node{
+//     int val;
+//     Node next;
+//     Node(int x){
+//     	val = x; next = null;
+//     }
+// }
+class Solution{
+    static int solve(Node root){
+    
+     Node p = root.next, prev = root;
+        if(p==null){return 0;}
+        int count=0;
+        while(p.next!=null){
+            if(prev.val>p.val && p.next.val>p.val){
+                count++;
+            }
+            else if(prev.val<p.val && p.next.val<p.val){
+                count++;
+            }
+            p = p.next;
+            prev = prev.next;
+        }
+        return count;
+    }
+}
